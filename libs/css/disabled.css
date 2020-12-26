@@ -1,0 +1,23 @@
+.disabled {
+    color: grey;
+    background: rgb(0, 0, 0, 20%);
+    cursor: not-allowed;
+    transition: all 0.5s;
+    margin-right: 4px;
+}
+
+.disabled:hover {
+    color: red;
+    font-weight: 500;
+    background: rgb(0, 0, 0, 20%);
+    box-shadow: 2px 2px 2px black;
+}
+
+.hide {
+    opacity: 0%;
+}
+
+.hide2 {
+    position: absolute;
+    left: -200px;
+}

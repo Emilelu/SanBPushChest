@@ -1,0 +1,52 @@
+* {
+    transition: all 0.2s;
+    user-select: none;
+}
+
+html {
+    min-width: 1042px;
+    min-height: 907px;
+}
+
+body {
+    text-align: center;
+    z-index: 0;
+}
+
+#map {
+    border: 6px double grey;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.chest {
+    z-index: 1;
+}
+
+.blur {
+    filter: blur(50px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -60;
+    opacity: 80%;
+}
+
+@media screen and (max-width: 1042px) {
+    #key {
+        display: none;
+    }
+    #notice {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 907px) {
+    #key {
+        display: none;
+    }
+    #notice {
+        display: none;
+    }
+}

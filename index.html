@@ -1,0 +1,93 @@
+<!-- Update in 2020.12.25 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./libs/css/main.css" />
+        <title>Copyright (C) 2020 Emilelu. All rights reserved.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./assets/imgs/items/chest.png" type="image/x-icon" />
+    </head>
+    <body>
+        <!-- Flow window & Colorful Experience -->
+        <img src="./assets/imgs/utils/blur.png" class="blur" />
+        <div id="flow">
+            <img src="./assets/imgs/utils/blur.png" class="blur" />
+            <div id="window" style="color: cornflowerblue">
+                <img
+                    src="./assets/imgs/utils/blur.png"
+                    class="blur"
+                    style="opacity: 100%; filter: blur(40px)"
+                />
+                <p id="oh" class="lang"></p>
+                <span
+                    class="lang"
+                    id="left"
+                    onclick="nextLevel(false);document.getElementById('flow').style.display='none'"
+                ></span>
+                <span
+                    class="lang"
+                    id="right"
+                    onclick="nextLevel(true);document.getElementById('flow').style.display='none'"
+                ></span>
+            </div>
+        </div>
+
+        <!-- Audio Tags -->
+        <audio src="./assets/audios/bgm.mp3" loop="loop"></audio>
+        <audio src="./assets/audios/effects/effect.wav"></audio>
+
+        <!-- Front Views-->
+        <n id="notice">
+            <b>!</b>
+            <n id="message" class="lang"></n>
+        </n>
+
+        <div id="key">
+            <div id="up" onclick="left()">
+                <img src="./assets/imgs/keys/w.png" class="k" />
+            </div>
+            <div id="down">
+                <img src="./assets/imgs/keys/a.png" class="k" onclick="up()" />
+                <img src="./assets/imgs/keys/s.png" class="k" onclick="right()" />
+                <img src="./assets/imgs/keys/d.png" class="k" onclick="down()" />
+            </div>
+        </div>
+
+        <h2 id="status"></h2>
+        <hr />
+        <p>
+            <span onclick="nextLevel(false)" class="lang"></span>
+            <!-- <span onclick="cheat()" class="lang"></span> -->
+            <select class="spec sd" id="select" disabled="disabled">
+                <option class="lang">Level 1</option>
+                <option class="lang">Level 2</option>
+                <option class="lang">Level 3</option>
+                <option class="lang">Level 4</option>
+            </select>
+            <span onclick="cheat2()" class="lang"></span>
+            <span onclick="fs()" id="fs" class="lang"></span>
+            <span class="disabled lang" id="cr"></span>
+            <select class="spec" id="select2">
+                <option>English</option>
+                <option>简体中文</option>
+                <option>繁體中文</option>
+                <option>日本語</option>
+                <option>Русский</option>
+                <option>Deutsche</option>
+                <option>Français</option>
+            </select>
+            <!-- <span onclick="switchLang(true)" class="lang"></span> -->
+        </p>
+
+        <!-- Game Core -->
+        <script src="./libs/js/multiLang.js"></script>
+        <script src="./libs/js/mapGenerator.js"></script>
+        <script src="./libs/js/level.js"></script>
+        <script src="./libs/js/move.js"></script>
+        <script src="./libs/js/service.js"></script>
+        <script src="./libs/js/cheat.js"></script>
+        <script src="./libs/js/start.js"></script>
+        <script src="./libs/js/easterEgg.js"></script>
+    </body>
+</html>

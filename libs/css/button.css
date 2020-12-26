@@ -1,0 +1,15 @@
+span {
+    padding: 5px 20px;
+    border: 5px solid black;
+}
+
+span:hover {
+    background-color: #66ccff;
+    color: white;
+    box-shadow: 2px 2px 2px black;
+}
+
+span:active {
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,17 @@
+#key {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.k {
+    width: 50px;
+    height: 50px;
+    border-radius: 52%;
+}
+
+.k:active {
+    width: 45px;
+    height: 45px;
+    background-color: rgb(128, 128, 128, 50%);
+}
