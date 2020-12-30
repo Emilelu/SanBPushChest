@@ -1,6 +1,6 @@
 /*
 *
-*   Push Chest Stylesheet | Version 0.3.0-alpha
+*   Push Chest Stylesheet | Version 0.3.8-alpha
 *   Copyright (C) 2020 Emilelu. All rights reserved.
 *
 */
@@ -28,3 +28,6 @@
 
 /* Virtual Key Style */
 @import './key.css';
+
+/* Volume Switcher Style*/
+@import './volume.css';

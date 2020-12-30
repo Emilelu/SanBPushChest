@@ -33,20 +33,20 @@ body {
     opacity: 80%;
 }
 
-@media screen and (max-width: 1042px) {
+@media screen and (max-width: 1242px) {
     #key {
         display: none;
     }
-    #notice {
+    .notice {
         display: none;
     }
 }
 
-@media screen and (max-height: 907px) {
+@media screen and (max-height: 607px) {
     #key {
         display: none;
     }
-    #notice {
+    .notice {
         display: none;
     }
 }

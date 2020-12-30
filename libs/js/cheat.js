@@ -1,5 +1,6 @@
 var notToL2 = true; // 是否首次进入 Level 2
 var removeIng = false; // 是否正在删除箱子
+var completed = false;
 
 function cheat() {
     playSoundEffect();
@@ -57,11 +58,16 @@ function cheat2() {
     }
 }
 
+function cheat3(row, col) {
+    arr[row][col] = 0;
+}
+
 var mySelect = document.getElementById('select');
 var theIndex = mySelect.selectedIndex;
 mySelect.className += ' disabled';
 mySelect.onclick = function () {
     if (statusNow && level == init().length - 1) {
+        completed = true;
         statusNow = false;
         for (let i = 0; i < spans.length; i++) {
             spans[i].className = 'lang';
@@ -69,6 +75,7 @@ mySelect.onclick = function () {
         document.onkeydown = keyDown;
         removeIng = false;
         document.getElementById('cr').onclick = changeRole;
+        document.getElementById('cheat2').onclick = cheat2;
     }
     // else statusNow = true;
     theIndex = mySelect.selectedIndex;

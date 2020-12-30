@@ -17,7 +17,7 @@ function getLang(s) {
             'Next',
             'Game Rule: Push all the chests to the flags. Use the arrow keys which on your keyboard to control the role.',
             '[Q] Replay',
-            'Level 1',
+            '[E/T] Level 1',
             'Level 2',
             'Level 3',
             'Level 4',
@@ -27,7 +27,7 @@ function getLang(s) {
             'GAME OVER',
             'Congratulations!!!!!!!!!!<br><br><br>Click any position to close this window.',
             'Level ',
-            'Push Chest | Version 0.3.5-alpha',
+            'Push Chest | Version 0.3.8-alpha',
         ],
         [
             '你通过这关了!',
@@ -45,7 +45,7 @@ function getLang(s) {
             '游  戏  结  束',
             '恭喜通关!!!!!!!!!!<br><br><br>点击任意位置关闭本窗口',
             '关卡 ',
-            '伞兵推箱子 | 版本 0.3.5-阿尔法',
+            '伞兵推箱子 | 版本 0.3.8-阿尔法',
         ],
         [
             '你通過這關了!',
@@ -63,7 +63,7 @@ function getLang(s) {
             '遊 戲 結 束',
             '恭喜通關!!!!!!!!!!<br><br><br>點擊任意位置關閉本窗口',
             '關卡 ',
-            '傘兵推箱子 | 版本 0.3.5-阿爾法',
+            '傘兵推箱子 | 版本 0.3.8-阿爾法',
         ],
         [
             'あなたはこのレベルを通過しました！',
@@ -81,7 +81,7 @@ function getLang(s) {
             'ゲームオーバー',
             'おめでとうございます!!!!!!!!!! <br><br><br>任意の位置をクリックして、このウィンドウを閉じます。',
             'レベル ',
-            'パラトルーパーソコバン | バージョン 0.3.5-アルファ',
+            'パラトルーパーソコバン | バージョン 0.3.8-アルファ',
         ],
         [
             'Вы прошли этот уровень!',
@@ -99,7 +99,7 @@ function getLang(s) {
             'ИГРА ЗАВЕРШЕНА',
             'Поздравляем !!!!!!!!!! <br><br><br>Щелкните в любом месте, чтобы закрыть это окно.',
             'Уровень ',
-            'Толкать сундук | Версия 0.3.5-alpha ',
+            'Толкать сундук | Версия 0.3.8-alpha ',
         ],
         [
             'Du hast dieses Level bestanden!',
@@ -117,7 +117,7 @@ function getLang(s) {
             'SPIEL IST AUS',
             'Herzlichen Glückwunsch !!!!!!!!!! <br><br><br>Klicken Sie auf eine beliebige Position, um dieses Fenster zu schließen.',
             'Niveau ',
-            'Brust drücken | Version 0.3.5-alpha ',
+            'Brust drücken | Version 0.3.8-alpha ',
         ],
         [
             'Vous avez passé ce niveau!',
@@ -135,7 +135,7 @@ function getLang(s) {
             'JEU TERMINÉ',
             "Félicitations !!!!!!!!!! <br><br><br>Cliquez sur n'importe quelle position pour fermer cette fenêtre.",
             'Niveau ',
-            'Pousser la poitrine | Version 0.3.5-alpha',
+            'Pousser la poitrine | Version 0.3.8-alpha',
         ],
     ];
     if (s == 'cao') return lang;

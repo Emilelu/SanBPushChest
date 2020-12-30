@@ -1,3 +1,5 @@
+var nowSelectedChest, nowSelectedFlag;
+
 function init() {
     var mapList = [
         [
@@ -113,6 +115,17 @@ function gridable(arr) {
                 );
                 barrier.style.backgroundSize = '100% 100%';
                 barrier.className = 'barrier';
+
+                barrier.bRow = row;
+                barrier.bCol = col;
+
+                barrier.onclick = function () {
+                    if (!completed) return;
+                    playSoundEffect();
+                    map.removeChild(this);
+                    cheat3(this.bRow, this.bCol);
+                    console.log(`[System] Removed a barrier#${this.bRow},${this.bCol}`);
+                };
             }
             if (arr[row][col] == 2) {
                 role = createUnit(
@@ -143,6 +156,21 @@ function gridable(arr) {
                 flags.fCol = col;
                 flags.id = row + ',' + col;
                 flags.className = 'flags';
+
+                flags.onclick = function () {
+                    if (!completed) return;
+                    if (nowSelectedChest != undefined) {
+                        nowSelectedFlag = this;
+                        nowSelectedChest.style.left = this.fCol * 50 + 'px';
+                        nowSelectedChest.style.top = this.fRow * 50 + 'px';
+                        arr[this.fRow][this.fCol] = 1;
+                        this.onclick = null;
+                        nowSelectedChest.style.boxShadow = 'none';
+                        nowSelectedChest.onclick = null;
+                        nowSelectedChest = undefined;
+                        check();
+                    }
+                };
             }
             if (arr[row][col] == 4) {
                 oCase = createUnit(
@@ -160,6 +188,12 @@ function gridable(arr) {
                 oCase.cRow = row;
                 oCase.cCol = col;
                 oCase.className = 'chest';
+
+                oCase.onclick = function () {
+                    if (!completed || nowSelectedChest != undefined) return;
+                    nowSelectedChest = this;
+                    this.style.boxShadow = '1px 1px 1px 1px black';
+                };
             }
         }
     }

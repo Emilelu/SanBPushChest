@@ -1,4 +1,5 @@
-<!-- Update in 2020.12.25 -->
+<!-- Update in 2020.12.30 -->
+<!-- Intend to optimize and fill the holes in 0.4.0 -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -34,13 +35,30 @@
         </div>
 
         <!-- Audio Tags -->
-        <audio src="./assets/audios/bgm.mp3" loop="loop"></audio>
+        <audio src="./assets/audios/bgm.mp3" loop="loop" id="bgm"></audio>
         <audio src="./assets/audios/effects/effect.wav"></audio>
 
         <!-- Front Views-->
-        <n id="notice">
+        <n class="notice">
             <b>!</b>
-            <n id="message" class="lang"></n>
+            <n class="lang message"></n>
+        </n>
+
+        <n class="notice" style="bottom: 110px; right: 20px" id="volume2">
+            <label class="volume">
+                <input type="checkbox" />
+                <svg viewBox="0 0 108 96">
+                    <path
+                        d="M7,28 L35,28 L35,28 L59,8 L59,88 L35,68 L7,68 C4.790861,68 3,66.209139 3,64 L3,32 C3,29.790861 4.790861,28 7,28 Z"
+                    ></path>
+                    <path
+                        d="M79,62 C83,57.3333333 85,52.6666667 85,48 C85,43.3333333 83,38.6666667 79,34 L49,3"
+                    ></path>
+                    <path
+                        d="M95,69 C101.666667,61.6666667 105,54.3333333 105,47 C105,39.6666667 101.666667,32.3333333 95,25 L75.5,6 L49,33"
+                    ></path>
+                </svg>
+            </label>
         </n>
 
         <div id="key">
@@ -65,12 +83,12 @@
                 <option class="lang">Level 3</option>
                 <option class="lang">Level 4</option>
             </select>
-            <span onclick="cheat2()" class="lang"></span>
+            <span class="lang disabled" id="cheat2"></span>
             <span onclick="fs()" id="fs" class="lang"></span>
             <span class="disabled lang" id="cr"></span>
             <select class="spec" id="select2">
                 <option>English</option>
-                <option>简体中文</option>
+                <option>[L] 简体中文</option>
                 <option>繁體中文</option>
                 <option>日本語</option>
                 <option>Русский</option>
@@ -84,10 +102,10 @@
         <script src="./libs/js/multiLang.js"></script>
         <script src="./libs/js/mapGenerator.js"></script>
         <script src="./libs/js/level.js"></script>
-        <script src="./libs/js/move.js"></script>
         <script src="./libs/js/service.js"></script>
         <script src="./libs/js/cheat.js"></script>
         <script src="./libs/js/start.js"></script>
+        <script src="./libs/js/move.js"></script>
         <script src="./libs/js/easterEgg.js"></script>
     </body>
 </html>

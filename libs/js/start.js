@@ -46,11 +46,12 @@ console.log('[System] Variables generated.');
 
 // Enable services
 setInterval(() => {
-    document.getElementById('notice').style.backgroundColor = rgb();
+    for (var i = 0; i < notices.length; i++) notices[i].style.backgroundColor = rgb();
 }, 1000);
 document.onkeydown = keyDown;
 start();
-switchLang(langID);
+switchLang(1);
+langSelector.selectedIndex = 1;
 
 // End
 console.log('[System] Game initialization accomplished.\n');

@@ -1,4 +1,4 @@
-#notice {
+.notice {
     position: fixed;
     right: 20px;
     bottom: 20px;
@@ -12,7 +12,7 @@
     transition: all 0.5s;
 }
 
-#notice:hover {
+.notice:hover {
     width: 370px;
     height: 60px;
     box-shadow: 2px 2px 2px grey;
@@ -22,10 +22,26 @@
     padding: 0.5%;
 }
 
-#message {
+.message {
     display: none;
 }
 
-#notice:hover > #message {
+.notice:hover > .message {
     display: inline;
+}
+
+#volume2 {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+}
+
+#volume2:hover {
+    width: 80px;
+    height: 50px;
+    box-shadow: 2px 2px 2px grey;
+    background: rgb(0, 0, 0, 80%);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5%;
 }

@@ -9,6 +9,7 @@
     text-align: center;
     text-align-last: center;
     position: relative;
+    outline: none;
 }
 
 .spec:hover {

@@ -1,5 +1,7 @@
 var go = false; // 是否正在播放音效
+var firstBGM = false;
 function playSoundEffect() {
+    if (bgmSwitcher.checked == true) return;
     document.getElementsByTagName('audio')[1].pause();
     document.getElementsByTagName('audio')[1].src =
         soundEffects[Math.floor(Math.random() * soundEffects.length)];
@@ -42,8 +44,19 @@ function fs() {
 
 function keyDown(e) {
     go = true;
+    if (hitCount == 20 && !isCrossAble) {
+        isCrossAble = true;
+        // offSetX++;
+        // offSetY++;
+        // offSetXY--;
+        console.log('穿墙术已开启');
+    }
     // console.log(e);
     try {
+        if (e.keyCode == 77) {
+            bgmSwitcher.click();
+            return;
+        }
         if (e.keyCode == 75) {
             cheat2();
             return;
@@ -68,7 +81,10 @@ function keyDown(e) {
         }
         if (e.keyCode == 70) fs();
 
-        document.getElementsByTagName('audio')[0].play();
+        if (!firstBGM && bgmSwitcher.checked == false) {
+            document.getElementsByTagName('audio')[0].play();
+            firstBGM = true;
+        }
 
         if (e.keyCode == 37 || e.keyCode == 65) up();
         if (e.keyCode == 39 || e.keyCode == 68) down();
@@ -93,4 +109,11 @@ function start() {
     switchLang(false);
 }
 
-document.getElementById('notice').onclick = playSoundEffect;
+var notices = document.getElementsByClassName('notice');
+for (var i = 0; i < notices.length; i++) notices[i].onclick = playSoundEffect;
+
+var bgmSwitcher = document.getElementsByTagName('input')[0];
+bgmSwitcher.onclick = function () {
+    if (this.checked == true) document.getElementById('bgm').pause();
+    else document.getElementById('bgm').play();
+};
